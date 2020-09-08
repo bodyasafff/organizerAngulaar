@@ -1,0 +1,9 @@
+<div class="container">
+    <img class="arrow" src="assets/icons/arrow_left.png" (click)="go(-1)">
+
+    <span>
+        {{ dateService.date | async | moment }}
+    </span>
+    
+    <img class="arrow" src='assets/icons/arrow_right.png' (click)="go(1)">
+</div>

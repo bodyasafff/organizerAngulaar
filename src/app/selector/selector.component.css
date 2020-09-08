@@ -1,0 +1,16 @@
+.arrow{
+    width: 30px;
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 40px 0;
+}
+span{
+    margin: 0 2rem;
+    text-align: center;
+    width: 200px;
+    padding-top: 8px;
+}
