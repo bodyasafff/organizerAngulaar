@@ -10,6 +10,10 @@ export class SelectorComponent implements OnInit {
 
   constructor(private dateService: DateService) { }
 
+  public getDateSevice(){
+    return this.dateService;
+  }
+
   public go(dir: number){
     this.dateService.changeMonth(dir);
   }
