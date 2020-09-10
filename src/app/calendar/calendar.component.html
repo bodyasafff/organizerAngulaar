@@ -1,10 +1,25 @@
 <table>
+    <thead>
+        <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+        </tr>
+    </thead>
     <tbody>
-        <tr *ngFor="let day of getCalendar()">
-            <td>
-                <span>
+        <tr *ngFor="let week of getCalendar()">
+            <td *ngFor="let day of week.days" 
+            [class.active]="day.active"
+            [class.disabled]="day.disabled">
+
+                <span (click)="getDay(day)">
                     {{ day.value | moment:'ddd DD' }}
                 </span>
+                
             </td>
         </tr>
     </tbody>
